@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title id="siteTitle"></title>
+        <link rel="stylesheet" href="movieDetailsStyle.css">
+    </head>
+
+    <body>
+        <div class="topBar">
+            <a class="Logo" href="index.html">MovieInfo.com</a>
+            <div class="searchContainer">
+                <form role="search" id="form">
+                    <input type="search" id="query" name="searchBar" placeholder="Search...">
+                </form>
+            </div>
+        </div>
+
+        <div style="padding-left: 16px;"></div>
+
+        <section id="movieInfo">
+            <div class="card">
+                <img  class="thumbnail" id="movieImg" src="#">
+            </div>
+            <div class="text">
+                <h1 id="movieTitle"></h1>
+                <p id="movieOverview"></p>
+                <br>
+                <div class="genres" id="genres">
+                    <p id="genreInitialText">Genres: </p>
+                    <p id="genreText"></p>
+                </div>
+            </div>
+        </section>
+    </body>
+    <script src="movieDetailsScript.js"></script>
+</html>

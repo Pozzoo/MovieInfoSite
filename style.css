@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #131720;
+    font-family: sans-serif;
+}
+
+h3 {
+    color: white;
+}
+
+.topBar {
+    overflow: hidden;
+    background-color: #131720;
+    padding: 10px;
+}
+
+.topBar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.topBar .searchContainer {
+    float: right;
+}
+
+.searchContainer form {
+    background-color: #151f30;
+    width: 300px;
+    height: 43px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+}
+
+input {
+    all: unset;
+    font: 15px system-ui;
+    color: white;
+    height: 100%;
+    width: 100%;
+    padding: 6px 9px;
+    display: flex;
+}
+
+.row {
+    padding-left: calc(3%);
+}
+
+.thumbnail {
+    vertical-align: super;
+    height: 375px;
+    width: 250px;
+    border-radius: 10px;
+}
+
+#movieSection {
+    vertical-align: middle;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+
+.card {
+    border-radius: 13px;
+    padding: 15px;
+    text-align: center;
+    background-color: #151f30;
+    height: 470px;
+    width: 300px;
+}
+
+.card:hover {
+    background-color: #152D30;
+    cursor: pointer;
+}
+
+.pageSelector {
+    padding: 10px 16px;
+    text-align: center;
+    align-items: center;
+}
+
+#prevButton, #nextButton {
+    color: white;
+    font: 15px system-ui;
+    background-color: #151f30;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;;
+}
+
+#prevButton:hover, #nextButton:hover {
+    cursor: pointer;
+    background-color: #152D30;
+}
+
+.pageSelector pre {
+    color: white;
+    display: inline-flex;
+    height: 50%;
+    width: 3%;
+    font-size: 15px system-ui   ;
+    background-color: #151f30;
+    border-radius: 15px;
+    text-align: center;
+    padding: 10px;
+}
+
+pre:hover {
+    cursor: default;
+}
+
+.invisible {
+    display: none;
+}
+

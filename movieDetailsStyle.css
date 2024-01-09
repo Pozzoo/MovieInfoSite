@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #131720;
+    font-family: sans-serif;
+}
+
+h3 {
+    color: white;
+}
+
+.topBar {
+    overflow: hidden;
+    background-color: #131720;
+    padding: 10px;
+}
+
+.topBar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.topBar .searchContainer {
+    float: right;
+}
+
+.searchContainer form {
+    background-color: #151f30;
+    width: 300px;
+    height: 43px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+}
+
+input {
+    all: unset;
+    font: 15px system-ui;
+    color: white;
+    height: 100%;
+    width: 100%;
+    padding: 6px 9px;
+    display: flex;
+}
+
+#movieInfo {
+    display: inline-flex;
+    background-color: #151f30;
+    padding-right: 15px;
+    border-radius: 20px;
+}
+
+.thumbnail {
+    padding: 20px;
+    height: 600px;
+    width: 400px;
+}
+
+.text {
+    padding-left: 40px;
+    color: white;
+}
+
+h1 {
+    font-family: sans-serif;
+    font-size: 60px;
+}
+
+#movieOverview {
+    max-width: 500px;
+}
+
+.card {
+    background-color: #151f30;
+    border-radius: 20px;
+}
+
+#genres {
+    display: flex;
+}
+
