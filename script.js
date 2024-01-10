@@ -1,8 +1,8 @@
 let pageNum = 1;
 
-const apiKey = "&api_key=062ce77bc25b8f2288fac988199ab904";
+const apiKey = config.API_KEY;
 const movieSearchApi = "https://api.themoviedb.org/3/search/movie?query="
-const apiLink = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc";
+const apiLink = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc?api_key=";
 const imgPath = "https://image.tmdb.org/t/p/w1280";
 const searchApi = "https://api.themoviedb.org/3/search/movie?query=";
 
@@ -83,7 +83,7 @@ function returnMovies(url) {
         if (searchItem) {
             main.innerHTML = "";
             console.log(searchItem);
-            returnMovies(searchApi + searchItem + apiKey);
+            returnMovies(searchApi + searchItem + "?api_key=" + apiKey);
             search.value = "";
         } else {
             returnMovies(apiLink + "1");
