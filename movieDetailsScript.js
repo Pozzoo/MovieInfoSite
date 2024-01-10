@@ -1,8 +1,6 @@
 const apiKey = "?api_key=062ce77bc25b8f2288fac988199ab904";
 const movieSearchApi = "https://api.themoviedb.org/3/movie/"
-const apiLink = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=062ce77bc25b8f2288fac988199ab904&page=";
 const imgPath = "https://image.tmdb.org/t/p/w1280";
-const searchApi = "https://api.themoviedb.org/3/search/movie?query=";
 
 const movieImg = document.getElementById("movieImg")
 const movieTitle = document.getElementById("movieTitle");

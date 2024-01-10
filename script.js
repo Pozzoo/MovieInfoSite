@@ -2,7 +2,7 @@ let pageNum = 1;
 
 const apiKey = "&api_key=062ce77bc25b8f2288fac988199ab904";
 const movieSearchApi = "https://api.themoviedb.org/3/search/movie?query="
-const apiLink = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=062ce77bc25b8f2288fac988199ab904&page=";
+const apiLink = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc";
 const imgPath = "https://image.tmdb.org/t/p/w1280";
 const searchApi = "https://api.themoviedb.org/3/search/movie?query=";
 
@@ -15,24 +15,28 @@ const pageNumDisplay = document.getElementById("pageNumDisplay");
 
 
 
-returnMovies(apiLink  + "1");
+returnMovies(apiLink + apiKey + "&page=1");
 
 prevButton.onclick = prevClick
 nextButton.onclick = nextClick
 
 function prevClick() {
-if (pageNum > 1) {
-    pageNum--;
-}
+    if (pageNum > 1) {
+        pageNum--;
+    }
     returnMovies(apiLink + pageNum);
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 
 function nextClick() {
     if (pageNum < 20) {
         pageNum++;
-    }
-        returnMovies(apiLink + pageNum);
-    }
+    };
+    returnMovies(apiLink + apiKey + "&page=" + pageNum);    
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
 
 function returnMovies(url) {
     pageNumDisplay.innerText = pageNum;
@@ -52,12 +56,6 @@ function returnMovies(url) {
             divCard.setAttribute("class", "card");
             divCard.setAttribute("onclick", "movieClick("+index+")")
 
-            const divRow = document.createElement("div");
-            divRow.setAttribute("class", "row");
-
-            const divColumn = document.createElement("div");
-            divColumn.setAttribute("class", "column");
-
             const image = document.createElement("img");
             image.setAttribute("class", "thumbnail");
             image.setAttribute("id", "image");
@@ -71,10 +69,8 @@ function returnMovies(url) {
             divCard.appendChild(movieId);
             divCard.appendChild(image);
             divCard.appendChild(title);
-            divColumn.appendChild(divCard);
-            divRow.appendChild(divColumn);
 
-            main.appendChild(divRow);
+            main.appendChild(divCard);
             index++;
         });
     });
@@ -92,7 +88,7 @@ function returnMovies(url) {
         } else {
             returnMovies(apiLink + "1");
         }
-    })
+    });
 }
 
 function movieClick(movieIndex) {
@@ -101,9 +97,5 @@ function movieClick(movieIndex) {
 
     sessionStorage.setItem("movieId", movieId);
 
-    window.location.href = "movieDetails.html"
+    window.location.href = "movieDetails.html";
 }
-
-
-
-

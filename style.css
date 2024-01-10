@@ -11,25 +11,21 @@ h3 {
     color: white;
 }
 
-.topBar {
-    overflow: hidden;
+header {
     background-color: #131720;
     padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
 }
 
-.topBar a {
-    float: left;
-    display: block;
+header a {
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 1.2rem;
     text-transform: uppercase;
-}
-
-.topBar .searchContainer {
-    float: right;
 }
 
 .searchContainer form {
@@ -51,10 +47,6 @@ input {
     display: flex;
 }
 
-.row {
-    padding-left: calc(3%);
-}
-
 .thumbnail {
     vertical-align: super;
     height: 375px;
@@ -63,13 +55,11 @@ input {
 }
 
 #movieSection {
-    vertical-align: middle;
-}
-
-.column {
-    float: left;
-    width: 25%;
-    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(350px, 1fr));
+    grid-template-rows: repeat(auto, minmax(520px, 520px));
+    gap: 15px;
+    justify-items: center;
 }
 
 .card {
@@ -89,7 +79,6 @@ input {
 .pageSelector {
     padding: 10px 16px;
     text-align: center;
-    align-items: center;
 }
 
 #prevButton, #nextButton {
@@ -114,7 +103,7 @@ input {
     font-size: 15px system-ui   ;
     background-color: #151f30;
     border-radius: 15px;
-    text-align: center;
+    justify-content: center;
     padding: 10px;
 }
 

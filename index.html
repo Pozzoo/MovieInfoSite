@@ -6,36 +6,30 @@
         <link rel="stylesheet" href="style.css">
     </head>
 
-    <body>
-        <div class="topBar">
-            <a class="Logo" href="index.html">MovieInfo.com</a>
-            <div class="searchContainer">
-                <form role="search" id="form">
-                    <input type="search" id="query" name="searchBar" placeholder="Search...">
-                </form>
-            </div>
+    <header>
+        <a class="Logo" href="index.html">MovieInfo.com</a>
+        <div class="searchContainer">
+            <form role="search" id="form">
+                <input type="search" id="query" name="searchBar" placeholder="Search...">
+            </form>
         </div>
+    </header>
 
-        <div style="padding-left: 16px;"></div>
-
+    <body>
         <section id="movieSection">
-        <!--<div class="row">
-                <div class="column">
-                    <div class="card">
-                        <img src="#" class="thumbnail">
-                        <h3>Movie Title</h3>
-                    </div>
-                </div>
-            </div> -->
+        <!--<div class="card">
+                <img src="#" class="thumbnail">
+                <h3>Movie Title</h3>
+            </div>-->
         </section>
-
-       <div class="pageSelector">
-            <div class="pageInput">
-                <button id="prevButton">Prev. page</button>
-                <pre id="pageNumDisplay"></pre>
-                <button id="nextButton">Next page</button>
-            </div>
-        </div> 
     </body>
+
+    <footer>
+        <div class="pageSelector">
+            <button id="prevButton">Prev. page</button>
+            <pre id="pageNumDisplay"></pre>
+            <button id="nextButton">Next page</button>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </html>
