@@ -2,7 +2,7 @@ let pageNum = 1;
 
 const apiKey = config.API_KEY;
 const movieSearchApi = "https://api.themoviedb.org/3/search/movie?query="
-const apiLink = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc?api_key=";
+const apiLink = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=";
 const imgPath = "https://image.tmdb.org/t/p/w1280";
 const searchApi = "https://api.themoviedb.org/3/search/movie?query=";
 
@@ -41,8 +41,8 @@ function nextClick() {
 function returnMovies(url) {
     pageNumDisplay.innerText = pageNum;
     let index = 0;  
-    console.log("page: " + pageNum);
-    console.log(url);
+    //console.log("page: " + pageNum);
+    //console.log(url);
     main.innerHTML = "";
     fetch(url).then(res => res.json())
     .then(function(data) {
@@ -82,7 +82,7 @@ function returnMovies(url) {
 
         if (searchItem) {
             main.innerHTML = "";
-            console.log(searchItem);
+            //console.log(searchItem);
             returnMovies(searchApi + searchItem + "?api_key=" + apiKey);
             search.value = "";
         } else {
@@ -93,7 +93,7 @@ function returnMovies(url) {
 
 function movieClick(movieIndex) {
     const movieId = document.getElementById("index:"+movieIndex).textContent;
-    console.log(movieId);
+    //console.log(movieId);
 
     sessionStorage.setItem("movieId", movieId);
 
