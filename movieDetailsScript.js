@@ -1,5 +1,5 @@
 const apiKey = config.API_KEY;
-const movieSearchApi = "https://api.themoviedb.org/3/movie/"
+const movieSearchApi = "https://api.themoviedb.org/3/movie/";
 const imgPath = "https://image.tmdb.org/t/p/w1280";
 
 const movieImg = document.getElementById("movieImg")
@@ -9,16 +9,16 @@ const movieVote = document.getElementById("movieVote")
 const movieOverview = document.getElementById("movieOverview");
 const siteTitle = document.getElementById("siteTitle");
 const divGenres = document.getElementById("genres");
-const movieReleaseDate = document.getElementById("movieReleaseDate")
-const movieRuntime = document.getElementById("movieRuntime")
-const movieBudget = document.getElementById("movieBudget")
-const movieRevenuemovieRevenue = document.getElementById("movieRevenue")
+const movieReleaseDate = document.getElementById("movieReleaseDate");
+const movieRuntime = document.getElementById("movieRuntime");
+const movieBudget = document.getElementById("movieBudget");
+const movieRevenue = document.getElementById("movieRevenue");
 
 const movieId = sessionStorage.getItem("movieId");
 var genresDisp = " ";
-console.log(movieId)
+console.log(movieId);
 
-movieSearch(movieSearchApi + movieId + "?api_key=" + apiKey)
+movieSearch(movieSearchApi + movieId + "?api_key=" + apiKey);
 
 function movieSearch(url) {
 
@@ -39,6 +39,8 @@ function movieSearch(url) {
         movieReleaseDate.innerText += `${data.release_date}`;
         movieRuntime.innerText += `${data.runtime}` + "min";
         movieBudget.innerText += `${data.budget}`;
-        movieRevenuemovieRevenue.innerText += `${data.revenue}`;
+        movieRevenue.innerText += `${data.revenue}`;
     })
+
+    
 }
