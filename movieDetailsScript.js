@@ -1,6 +1,7 @@
 const apiKey = config.API_KEY;
 const movieSearchApi = "https://api.themoviedb.org/3/movie/";
 const imgPath = "https://image.tmdb.org/t/p/w1280";
+const reviewsApiKey = "http://localhost:8000/api/v1/reviews";
 
 const movieImg = document.getElementById("movieImg")
 const movieTitle = document.getElementById("movieTitle");
@@ -19,6 +20,8 @@ var genresDisp = " ";
 console.log(movieId);
 
 movieSearch(movieSearchApi + movieId + "?api_key=" + apiKey);
+
+returnReviews(reviewsApiKey + "/movie/" + movieId)
 
 function movieSearch(url) {
 
@@ -41,6 +44,20 @@ function movieSearch(url) {
         movieBudget.innerText += `${data.budget}`;
         movieRevenue.innerText += `${data.revenue}`;
     })
-
-    
 }
+
+// function returnReviews(reviewsURL) {
+//     console.log(reviewsURL)
+//     fetch(reviewsURL).then(res => res.json())
+//     .then(function(data) {
+//         data.forEach(review => {
+//             const div_card = document.createElement("div");
+//             div_card.innerHTML = `
+//             <div cass="card" id="${review._id}">
+//             <p><strong> Review: </strong>${review.review}</p>
+//             <p><strong> Review: </strong>${review.user}</p>`
+
+//             main.appendChild(div_card)
+//         });
+//     });
+// }
